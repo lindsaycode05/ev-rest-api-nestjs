@@ -5,13 +5,13 @@ steps:
       [
         'build',
         '-t',
-        'gcr.io/erudite-harbor-414918/ev-rest-api-nestjs:$SHORT_SHA',
+        'gcr.io/erudite-harbor-414918/ev-rest-api-nestjs:$COMMIT_SHA',
         '.',
       ]
 
   # Push the Docker image to Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/erudite-harbor-414918/ev-rest-api-nestjs:$SHORT_SHA']
+    args: ['push', 'gcr.io/erudite-harbor-414918/ev-rest-api-nestjs:$COMMIT_SHA']
 
   # Deploy the image to Google Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
@@ -30,4 +30,4 @@ steps:
       - '--allow-unauthenticated'
 
 images:
-  - 'gcr.io/erudite-harbor-414918/ev-rest-api-nestjs:$SHORT_SHA'
+  - 'gcr.io/erudite-harbor-414918/ev-rest-api-nestjs:$COMMIT_SHA'
