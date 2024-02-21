@@ -18,6 +18,9 @@ The API supports various operations for both companies and charging stations, in
 
 ```
 POST /companies
+
+Example: https://ev-rest-api-nestjs-eaqg4v77ma-ew.a.run.app/companies
+Method: POST
 ```
 
 ```js
@@ -34,10 +37,16 @@ GET /companies
 
 ```
 GET /companies/:id
+
+Example: https://ev-rest-api-nestjs-eaqg4v77ma-ew.a.run.app/companies/630000000000000000000008
+Method: GET
 ```
 
 ```
 PUT /companies/:id
+
+Example: https://ev-rest-api-nestjs-eaqg4v77ma-ew.a.run.app/companies/630000000000000000000008
+Method: PUT
 ```
 
 ```js
@@ -111,6 +120,8 @@ DELETE /stations/:id
 
 ```
 GET /stations/search/:companyId?latitude=40&longitude=-70&radius=100
+
+Example: https://ev-rest-api-nestjs-eaqg4v77ma-ew.a.run.app/stations/search/62b9f571e705fa8c6f22b9a1?latitude=40&longitude=-70&radius=350
 ```
 
 ### Example interaction from Postman
