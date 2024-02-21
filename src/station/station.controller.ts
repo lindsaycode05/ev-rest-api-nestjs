@@ -42,6 +42,7 @@ export class StationController {
   }
 
   @Get('search/:companyId')
+  // geospatial query to find all stations within a radius (value in km) of a given latitude and longitude for a company
   async findStationsWithinRadius(
     @Query('latitude') latitude: number,
     @Query('longitude') longitude: number,

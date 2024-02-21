@@ -1,5 +1,3 @@
-// Update to src/station/station.entity.ts to include GeoJSON for location
-
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
 

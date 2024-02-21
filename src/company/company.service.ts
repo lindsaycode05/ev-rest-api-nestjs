@@ -4,7 +4,6 @@ import { Model } from 'mongoose';
 import { Company, CompanyDocument } from './company.entity';
 import { CreateCompanyDto } from './dto/create-company.dto';
 import { UpdateCompanyDto } from './dto/update-company.dto';
-import { Types } from 'mongoose';
 
 @Injectable()
 export class CompanyService {
@@ -38,6 +37,7 @@ export class CompanyService {
     return this.companyModel.findOneAndDelete({ _id: id }).exec();
   }
 
+  // function to find all children companies of a parent company
   async findAllChildren(
     companyId: string,
     result: string[] = []
