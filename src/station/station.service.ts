@@ -49,9 +49,7 @@ export class StationService {
       companyId
     );
 
-    const allRelevantCompanyIds = [companyId, ...childCompanyIds].map(
-      (id) => new Types.ObjectId(id)
-    );
+    const allRelevantCompanyIds = [companyId, ...childCompanyIds];
 
     return this.stationModel
       .find({

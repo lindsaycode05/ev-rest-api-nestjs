@@ -16,7 +16,7 @@ export class Station {
   @Prop({ required: true })
   longitude: number;
 
-  @Prop({ required: true, type: Types.ObjectId, ref: 'Company', index: true })
+  @Prop({ required: true, ref: 'Company', index: true })
   companyId: string;
 
   @Prop({ required: true })

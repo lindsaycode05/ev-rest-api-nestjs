@@ -43,7 +43,7 @@ export class CompanyService {
     result: string[] = []
   ): Promise<string[]> {
     const children = await this.companyModel
-      .find({ parentCompanyId: new Types.ObjectId(companyId) })
+      .find({ parentCompanyId: companyId })
       .exec();
 
     for (const child of children) {

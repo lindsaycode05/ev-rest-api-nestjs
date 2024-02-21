@@ -9,7 +9,6 @@ export class Company {
   name: string;
 
   @Prop({
-    type: Types.ObjectId,
     ref: 'Company',
     required: false,
     index: true,
