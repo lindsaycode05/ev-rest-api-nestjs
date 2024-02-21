@@ -1,0 +1,10 @@
+# Ignore node modules
+node_modules
+
+# Ignore development config files
+.npmrc
+.pnpm-store
+.pnpm-debug.log
+
+# Ignore build outputs
+dist
